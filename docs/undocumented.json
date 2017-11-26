@@ -1,0 +1,26 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/avi/Projects/RatingView/AviControls/Controls/RatingView.swift",
+      "line": 88,
+      "symbol": "RatingView.intrinsicContentSize",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avi/Projects/RatingView/AviControls/Controls/RatingView.swift",
+      "line": 94,
+      "symbol": "RatingView.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avi/Projects/RatingView/AviControls/Controls/RatingView.swift",
+      "line": 220,
+      "symbol": "RatingView.gestureRecognizer(_:shouldRecognizeSimultaneouslyWith:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/avi/Projects/RatingView"
+}

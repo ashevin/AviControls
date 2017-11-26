@@ -19,7 +19,7 @@ public final class RatingView: UIControl, UIGestureRecognizerDelegate {
     /// **Default value**: 1
     public var rating: UInt = 1 {
         didSet {
-            rating = max(rating, minimummRating)
+            rating = max(rating, minimumRating)
             rating = min(rating, maximumRating)
 
             highlightImages()
@@ -41,10 +41,10 @@ public final class RatingView: UIControl, UIGestureRecognizerDelegate {
     /// Represents the minimum rating allowed.  When a value of zero is set, the user may tap a single selected image to unselect it.
     ///
     /// **Default value**: 1
-    public var minimummRating: UInt = 1 {
+    public var minimumRating: UInt = 1 {
         didSet {
-            minimummRating = min(minimummRating, maximumRating)
-            rating = max(rating, minimummRating)
+            minimumRating = min(minimumRating, maximumRating)
+            rating = max(rating, minimumRating)
 
             resetStackView()
         }
@@ -68,6 +68,8 @@ public final class RatingView: UIControl, UIGestureRecognizerDelegate {
     }
 
     /// The color to tint images which are not selected.
+    ///
+    /// **Default value**: `UIColor.lightGray`
     public var unselectedTintColor: UIColor = .lightGray {
         didSet {
             highlightImages()
@@ -75,6 +77,8 @@ public final class RatingView: UIControl, UIGestureRecognizerDelegate {
     }
 
     /// The color to tint images which are selected.
+    ///
+    /// **Default value**: `UIColor.yellow`
     public var selectedTintColor: UIColor = .yellow {
         didSet {
             highlightImages()
@@ -188,7 +192,7 @@ public final class RatingView: UIControl, UIGestureRecognizerDelegate {
                 return
         }
 
-        if rating == 1 && index == 0 && minimummRating == 0 {
+        if rating == 1 && index == 0 && minimumRating == 0 {
             rating = 0
         }
         else {
@@ -214,7 +218,7 @@ public final class RatingView: UIControl, UIGestureRecognizerDelegate {
     }
 
     public func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer,
-                           shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+                                  shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
         return true
     }
 }
